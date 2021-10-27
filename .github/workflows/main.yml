@@ -8,16 +8,26 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: job1st1
-        uses: actions/checkout@v2.0.0
-      - name: job1st2
-        run: Env | sort
+        run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
   job2:
-    needs: job1 
     name: job2
     runs-on: windows-latest
     steps:
       - name: job2st1
-        uses: actions/checkout@v2.0.0
-      - name: job2st2
-        run: "Get-ChildItem env: | Sort-Object Name"
+        run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
+        
+  job3:
+    name: job3
+    runs-on: macos-latest
+    steps:
+      - name: job3st1
+        run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
+  job4:
+    needs: [job1,job2,job3]
+    name: job4
+    runs-on: ubuntu-latest
+    steps: 
+      - name: job4st1
+        run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
+    
         

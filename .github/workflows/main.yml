@@ -22,22 +22,25 @@ jobs:
     steps:
       - name: job3st1
         run: date
-  job4:
-    needs: [job1,job2,job3]
-    name: job4
-    runs-on: ubuntu-latest
-    steps:
-      - name: checkoout
-        uses: actions/checkout@v2
-      - name: setup JDK
-        uses: actions/setup-java@v2
-        with:
-          java-version: 17.0.1
-          java-package: jdk
-          architecture: x64
-          distribution: temurin
-      - name: list & version
-        run: | 
-              ls -a
-              java -version
+        env:
+          CODE: $MY_PASS
+      - run: echo "this is code "+$CODE
+#   job4:
+#     needs: [job1,job2,job3]
+#     name: job4
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: checkoout
+#         uses: actions/checkout@v2
+#       - name: setup JDK
+#         uses: actions/setup-java@v2
+#         with:
+#           java-version: 17.0.1
+#           java-package: jdk
+#           architecture: x64
+#           distribution: temurin
+#       - name: list & version
+#         run: | 
+#               ls -a
+#               java -version
       

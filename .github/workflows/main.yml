@@ -27,7 +27,10 @@ jobs:
     name: job4
     runs-on: ubuntu-latest
     steps: 
-      - name: job4st1
-        run: date
-    
-        
+      - name: setup JDK
+        uses: actions/setup-java@1
+        with:
+          java-version: 17.0.1
+          java-package: jdk
+          architecture: x64
+      

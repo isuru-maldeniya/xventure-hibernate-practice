@@ -1,13 +1,22 @@
-name: hello
+name: first
 on: 
   push:
-    branches: -master
-    
-jobs: 
-  say-hello:
+    branches: master
+jobs:
+  job1:
+    name: job1
     runs-on: ubuntu-latest
-    
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2.0.0
-      - run: echo hello world
+      - name: job1st1
+        uses: action/checkout@v2
+      - name: job1st2
+        run: Env | sort
+  job2:
+    name: job2
+    runs-on: windows-latest
+    steps:
+      - name: job2st1
+        uses: action/checkout@V2 
+      - name: job2st2
+        run: "Get-ChildItem Env: Sort-Object Name"
+        

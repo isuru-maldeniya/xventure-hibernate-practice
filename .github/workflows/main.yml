@@ -24,7 +24,7 @@ jobs:
         run: date
         env:
           CODEPASS: ${{secrets.MY_PASS}}
-        if: ${{secrets.MY_PASS == 1234}}
+        if: ${{secrets.MY_PASS == '1234'}}
       - run: |
           then echo "this is code "
 #   job4:

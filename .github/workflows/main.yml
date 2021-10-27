@@ -23,7 +23,7 @@ jobs:
       - name: job3st1
         run: date
         env:
-          CODE: ${{secret.MY_PASS}}
+          CODE: ${{secrets.MY_PASS}}
       - run: echo "this is code "+$CODE
 #   job4:
 #     needs: [job1,job2,job3]

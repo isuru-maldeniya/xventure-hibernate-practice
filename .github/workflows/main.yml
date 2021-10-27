@@ -38,6 +38,6 @@ jobs:
           distribution: temurin
       - name: list & version
         run: | 
-              ls a
+              ls -a
               java -version
       

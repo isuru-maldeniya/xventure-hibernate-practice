@@ -36,4 +36,8 @@ jobs:
           java-package: jdk
           architecture: x64
           distribution: temurin
+      - name: list & version
+        run: | 
+              ls a
+              java -version
       

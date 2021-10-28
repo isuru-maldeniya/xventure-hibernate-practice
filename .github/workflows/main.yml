@@ -22,7 +22,7 @@ jobs:
     name: job3
     runs-on: macos-latest
     env:
-          CODEPASS: 'digit'
+          CODEPASS: '${{secrets.MY_PASS}}'
     steps:
       - name: job3st1
         run: date

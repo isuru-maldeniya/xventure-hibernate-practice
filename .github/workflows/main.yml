@@ -25,7 +25,7 @@ jobs:
           CODEPASS: '${{secrets.MY_PASS}}'
     steps:
       - name: job3st1
-        if: ${{CODEPASS=='1234'}}
+        if: ${{env.CODEPASS}}=='1234'
         run: |
           echo ${{env.CODEPASS}}
 #   job4:

@@ -14,7 +14,7 @@ jobs:
     name: job2
     runs-on: windows-latest
     env:
-      CODE: ${{secrets.MY_PASS}}
+      CODE: '${{secrets.MY_PASS}}'
     steps:
       - name: job2st1
         if: $Env:CODE== '1234'

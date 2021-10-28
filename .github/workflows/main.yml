@@ -17,7 +17,7 @@ jobs:
       CODE: '${{secrets.MY_PASS}}'
     steps:
       - name: job2st1
-        if: $Env:CODE== '1234'
+        if: ${{env.CODE}}== '1234'
         run:  echo "Done we are in the if(Windows) clause"
         
   job3:

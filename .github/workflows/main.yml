@@ -23,10 +23,10 @@ jobs:
       - name: job3st1
         run: date
         env:
-          CODEPASS: ${{secrets.MY_PASS}}
+          CODEPASS: digit
         if: secrets.MY_PASS == '1234'
       - run: |
-          then echo "this is code "
+          then echo $CODEPASS
 #   job4:
 #     needs: [job1,job2,job3]
 #     name: job4

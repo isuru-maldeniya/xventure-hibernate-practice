@@ -24,9 +24,9 @@ jobs:
       - name: job3st1
         run: date
         env:
-          CODEPASS: digit
+          CODEPASS: 'digit'
       - run: |
-          echo ${{Env.CODEPASS}}
+          echo ${{env.CODEPASS}}
 #   job4:
 #     needs: [job1,job2,job3]
 #     name: job4

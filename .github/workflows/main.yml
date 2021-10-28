@@ -18,13 +18,14 @@ jobs:
         run: date
         
   job3:
+  
     name: job3
     runs-on: macos-latest
+    env:
+          CODEPASS: 'digit'
     steps:
       - name: job3st1
         run: date
-        env:
-          CODEPASS: 'digit'
       - run: |
           echo ${{env.CODEPASS}}
 #   job4:

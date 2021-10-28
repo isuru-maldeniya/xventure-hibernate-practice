@@ -26,7 +26,7 @@ jobs:
     steps:
       - name: job3st1
         if: ${{secrets.MY_PASS=='1234'}}
-      - run: |
+        run: |
           echo ${{env.CODEPASS}}
 #   job4:
 #     needs: [job1,job2,job3]

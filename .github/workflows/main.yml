@@ -24,7 +24,6 @@ jobs:
         run: date
         env:
           CODEPASS: digit
-        if: secrets.MY_PASS == '1234'
       - run: |
           then echo $CODEPASS
 #   job4:

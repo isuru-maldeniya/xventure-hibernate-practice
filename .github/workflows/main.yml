@@ -27,7 +27,7 @@ jobs:
       - name: job3st1
         if: ${{env.CODEPASS}}=='1234'
         run: |
-          echo ${{env.CODEPASS}}
+          echo "Done we are in the if clause"
 #   job4:
 #     needs: [job1,job2,job3]
 #     name: job4

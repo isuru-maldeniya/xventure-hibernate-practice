@@ -25,7 +25,7 @@ jobs:
         env:
           CODEPASS: digit
       - run: |
-          then echo $CODEPASS
+          echo $CODEPASS
 #   job4:
 #     needs: [job1,job2,job3]
 #     name: job4
